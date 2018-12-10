@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="mainPost.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
+    
+</head>
+
+<body>
+    <header>
+        <div class="header" id="header_logo">
+            What time<br>
+            is it now<br>
+        </div>
+        
+        <button class="header" id="home_icon" onclick="location.href = 'index.html' ">
+            <i class="fas fa-home"></i>
+        </button>
+        <!-- <button class="header" id="share_icon">
+            <i class="far fa-list-alt"></i>
+        </button> -->
+    </header>
+    
+    <div class="margin" id="top"></div>
+    
+    <main>
+        <div class="margin" id="main_left"></div>
+        
+        <section class="contents">
+            <section class="post" id="post_wrap">
+                <form action="http://opso.ml/board" method="POST">
+                    <textarea name="author" id="post_name" placeholder="이름"></textarea>
+                    <textarea name="contents" id="post_article" placeholder="내용" rows='3'></textarea>
+                    <button id="post_send" type="reset" onclick="clickSendBtn()">
+                        send
+                    </button>
+                </form>
+            </section>
+            
+            <section class="view" id="view_wrap">
+                
+            </section>
+        </section>
+        
+        <div class="margin" id="main_left"></div>
+    </main>
+    
+    <footer>
+        
+    </footer>
+    
+    <script src="mainPost.js"></script>
+    <script src='autosize.js'></script>
+    <script>
+        autosize(document.querySelectorAll('textarea'));
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    background-image: url("background.png");
+}
+
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+  }
+.neon {
+
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+
+    -webkit-animation: neon1 0.6s ease-in-out infinite alternate;
+    -moz-animation: neon1 0.6s ease-in-out infinite alternate;
+    animation: neon1 0.6s ease-in-out infinite alternate;
+}
+
+header {
+    margin-top: 100px;
+    color: white;
+    font-size: 130px;
+
+    font-family: 'Charmonman', cursive;
+
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.margin#main_left {
+    flex: 2 1 auto;
+}
+
+.margin#main_right {
+    flex: 2 1 auto;
+}
+
+section {
+    flex: 1 2 auto;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro {
+    color: white;
+    font-size: 70px;
+    font-family: 'Charmonman', cursive;
+}
+
+button {
+    width: 200px;
+}
+
+footer {
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.character {}
+
+.image {
+    height: 300px;
+    width: 160px;
+    border: 1px solid blueviolet;
+    background-size: cover;
+
+}
+
+#김민재 {
+    background-image: url("image/김민재.png") !important;
+}
+
+#김재훈 {
+    background-image: url("image/김재훈.png") !important;
+}
+
+#이형창 {
+    background-image: url("image/이형창.png") !important;
+}
+
+#오현민 {
+    background-image: url("image/오현민.png") !important;
+}
+
+#이수빈 {
+    background-image: url("image/이수빈.png") !important;
+}
+
+.discription {
+    color: white;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}

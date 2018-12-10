@@ -1,0 +1,53 @@
+body {
+    margin: 0px;
+
+    background-image: url("background.png");
+}
+
+header {
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    height: 80px;
+
+    background: black;
+
+    display: flex;
+    align-items: center;
+
+    /* box-shadow: 0px 1px 1px 1px rgb(150, 150, 150); */
+}
+
+#header_logo {
+    margin-left: 20%;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 1000;
+    text-align: center;
+
+    margin-right: 2.5%;
+}
+
+button.header {
+    margin-left: 2%;
+
+    border: 0px;
+    outline: none;
+
+    background-color: unset;
+    background-size: cover;
+}
+
+.header#home_icon {
+    font-size: 50px;
+    color: white;
+}
+
+.header#share_icon {
+    font-size: 50px;
+    color: white;
+}
