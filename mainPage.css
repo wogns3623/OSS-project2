@@ -59,46 +59,67 @@ section {
 }
 
 button {
-    width: 200px;
+    font-size: 120px;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 footer {
-    border: 1px solid yellow;
+    margin-top: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.character {}
+.character.wrap{
+    margin-left: 80px;
 
-.image {
-    height: 300px;
-    width: 160px;
-    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character.image {
+    height: 250px;
+    width: 130px;
     background-size: cover;
+    -webkit-filter: drop-shadow(0px 0px 25px rgb(255, 255, 255) );
+    filter: drop-shadow(0px 0px 25px rgb(255, 255, 255));
 
 }
 
-#김민재 {
+.character#김민재 {
     background-image: url("image/김민재.png") !important;
 }
 
-#김재훈 {
+.character#김재훈 {
     background-image: url("image/김재훈.png") !important;
 }
 
-#이형창 {
+.character#이형창 {
     background-image: url("image/이형창.png") !important;
 }
 
-#오현민 {
+.character#오현민 {
     background-image: url("image/오현민.png") !important;
 }
 
-#이수빈 {
+.character#이수빈 {
     background-image: url("image/이수빈.png") !important;
 }
 
-.discription {
+.character.name{
     color: white;
+    font-size: 20px;
     font-family: 'Encode Sans Condensed', sans-serif;
+
+    text-align: center;
+}
+
+.character.discription {
+    color: white;
+    font-size: 20px;
+    font-family: 'Encode Sans Condensed', sans-serif;
+
+    text-align: center;
 }
