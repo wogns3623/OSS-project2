@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-var serverAddress = "http://opso.ml/board";
+var serverAddress = "https://opso.ml/board";
 // var serverAddress = "http://18.216.159.54/board";
 
 function getPost() {
