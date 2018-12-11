@@ -1,7 +1,7 @@
 body {
     margin: 0px;
 
-    background: #fff9e4 !important;
+    background-image: url("background.png")
 }
 
 .margin#top {
@@ -104,10 +104,11 @@ button#post_send {
 
     box-shadow: 1px 1px 1px 1px rgb(190, 190, 190);
 
-    background-color: #ffe1a1b2;
+    background-color: #935900;
 
 
     font-size: 25px;
+    color: white;
     text-align: center;
     vertical-align: middle;
 }

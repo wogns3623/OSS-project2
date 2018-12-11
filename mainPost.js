@@ -32,7 +32,7 @@ request.onreadystatechange = function (event) {
                 article += author;
                 article += '</div></div><div class="view_article">';
                 article += contents;
-                article += '</div><div class="view_buttonBox"><i class="fab fa-facebook-square"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-twitter-square"></i></div></div>';
+                article += '</div><div class="view_buttonBox"><i class="fab fa-facebook-square"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-twitter-square" onclick="popUpTwitter()"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-line"></i></div></div>';
 
                 articles += article;
             }
@@ -67,8 +67,18 @@ function clickSendBtn() {
         body: JSON.stringify(data)
     }).then();
 
-    setTimeout(function() {
+    setTimeout(function () {
         getPost()
     }, 600);
-    
+
 }
+
+function popUpTwitter(){
+    window.open("https://twitter.com/intent/tweet?"
+    +"&text=WhatTimeIsItNow?"
+    +"&url="+encodeURIComponent(window.location.href)
+    // , "_blank"
+    // , 'width=600,height=400,resizable=yes,scrollbars=yes'
+    );
+    console.log(window.location.href);
+};

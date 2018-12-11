@@ -4,13 +4,23 @@ body {
 
 @-webkit-keyframes neon1 {
     from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFF, 0 0 70px #FFF, 0 0 80px #FFF, 0 0 100px #FFF, 0 0 150px #FFF;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFF, 0 0 35px #FFF, 0 0 40px #FFF, 0 0 50px #FFF, 0 0 75px #FFF;
+    }
+  }
+  
+@-webkit-keyframes neon2 {
+    from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
     }
     to {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
     }
   }
-.neon {
+  
+  .neon1 {
 
     text-decoration: none;
     -webkit-transition: all 0.5s;
@@ -20,6 +30,18 @@ body {
     -webkit-animation: neon1 0.6s ease-in-out infinite alternate;
     -moz-animation: neon1 0.6s ease-in-out infinite alternate;
     animation: neon1 0.6s ease-in-out infinite alternate;
+}
+  
+.neon2 {
+
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+
+  -webkit-animation: neon2 0.6s ease-in-out infinite alternate;
+  -moz-animation: neon2 0.6s ease-in-out infinite alternate;
+  animation: neon2 0.6s ease-in-out infinite alternate;
 }
 
 header {
@@ -63,6 +85,7 @@ button {
     background: none;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 footer {
