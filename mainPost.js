@@ -111,13 +111,13 @@ function popUpTwitter(postID) {
     );
 };
 
-function popUpFacebook() {
+function popUpFacebook(postID) {
     window.open("https://www.facebook.com/sharer/sharer.php" +
         "?u=" + encodeURIComponent(window.location.href+"?postID="+postID), "share!", "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
     );
 };
 
-function popUpLine() {
+function popUpLine(postID) {
     window.open("https://social-plugins.line.me/lineit/share" +
         "?url=" + encodeURIComponent(window.location.href+"?postID="+postID), "share!", "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
     );
