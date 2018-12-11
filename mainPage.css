@@ -2,7 +2,7 @@ body {
     background-image: url("background.png");
 }
 
-@-webkit-keyframes neon1 {
+@-webkit-keyframes neon3 {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFF, 0 0 70px #FFF, 0 0 80px #FFF, 0 0 100px #FFF, 0 0 150px #FFF;
     }
@@ -10,8 +10,17 @@ body {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFF, 0 0 35px #FFF, 0 0 40px #FFF, 0 0 50px #FFF, 0 0 75px #FFF;
     }
   }
+
+  @-webkit-keyframes neon2 {
+      from {
+        text-shadow: 0 0 10px #ffdefd, 0 0 20px #ffdefd, 0 0 30px #ffdefd, 0 0 40px #f59af0, 0 0 70px #f59af0, 0 0 80px #f59af0, 0 0 100px #f59af0, 0 0 150px #f59af0;
+      }
+      to {
+        text-shadow: 0 0 5px #ffdefd, 0 0 10px #ffdefd, 0 0 15px #ffdefd, 0 0 20px #f59af0, 0 0 35px #f59af0, 0 0 40px #f59af0, 0 0 50px #f59af0, 0 0 75px #f59af0;
+      }
+    }
   
-@-webkit-keyframes neon2 {
+@-webkit-keyframes neon1 {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
     }

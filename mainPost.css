@@ -161,6 +161,10 @@ button#post_send:active {
     line-height: 50px;
 }
 
+.post_ID{
+    visibility: hidden;
+}
+
 .view_article {
     margin-top: 10px;
     font-size: 20px;

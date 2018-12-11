@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="mainPost.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="header.css" />
-    
+
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             What time<br>
             is it now<br>
         </div>
-        
+
         <button class="header" id="home_icon" onclick="location.href = 'index.html' ">
             <i class="fas fa-home"></i>
         </button>
@@ -27,41 +27,28 @@
             <i class="far fa-list-alt"></i>
         </button> -->
     </header>
-    
+
     <div class="margin" id="top"></div>
-    
+
     <main>
         <div class="margin" id="main_left"></div>
-        
-        <section class="contents">
-            <section class="post" id="post_wrap">
-                <form action="https://opso.ml/board" method="POST">
-                    <textarea name="author" id="post_name" placeholder="이름"></textarea>
-                    <textarea name="contents" id="post_article" placeholder="내용" rows='3'></textarea>
-                    <button id="post_send" type="reset" onclick="clickSendBtn()">
-                        send
-                    </button>
-                </form>
-            </section>
-            
-            <section class="view" id="view_wrap">
-                
-            </section>
-        </section>
-        
+
+        <div class="contents" id="contents_wrap">
+        </div>
+
         <div class="margin" id="main_left"></div>
     </main>
-    
+
     <footer>
-        
+
     </footer>
-    
+
     <script src="mainPost.js"></script>
     <script src='autosize.js'></script>
     <script>
         autosize(document.querySelectorAll('textarea'));
     </script>
-    
+
 </body>
 
 </html>
