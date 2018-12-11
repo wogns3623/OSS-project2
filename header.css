@@ -45,9 +45,11 @@ button.header {
 .header#home_icon {
     font-size: 50px;
     color: white;
+    cursor: pointer;
 }
 
 .header#share_icon {
     font-size: 50px;
     color: white;
+    cursor: pointer;
 }
