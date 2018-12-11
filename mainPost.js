@@ -32,7 +32,7 @@ request.onreadystatechange = function (event) {
                 article += author;
                 article += '</div></div><div class="view_article">';
                 article += contents;
-                article += '</div><div class="view_buttonBox"><i class="fab fa-facebook-square" onclick="popUpFacebook()"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-twitter-square" onclick="popUpTwitter()"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-line"></i></div></div>';
+                article += '</div><div class="view_buttonBox"><i class="fab fa-facebook-square" onclick="popUpFacebook()"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-twitter-square" onclick="popUpTwitter()"></i><div class="margin" id="buttonBox_middle"></div><i class="fab fa-line" onclick="popUpLine()"></i></div></div>';
 
                 articles += article;
             }
@@ -42,16 +42,6 @@ request.onreadystatechange = function (event) {
 }
 
 function clickSendBtn() {
-    // var authorVal = document.getElementById("post_name");
-    // var contentsVal = document.getElementById("post_article");
-    // var data = {
-    //     author: authorVal.value,
-    //     contents: contentsVal.value,
-    // };
-
-    // request.open("POST", serverAddress, true);
-    // request.setRequestHeader('Content-Type', 'application/json');
-    // request.send( JSON.stringify(data) );
     var authorVal = document.getElementById("post_name");
     var contentsVal = document.getElementById("post_article");
     var data = {
@@ -73,20 +63,22 @@ function clickSendBtn() {
 
 }
 
-function popUpTwitter(){
+function popUpTwitter() {
     // window.open("https://naver.com/", "", "left=400, top=400, width=400, height=400, scrollbars=0, toolbar=0, menubar=0");
-    window.open("https://twitter.com/intent/tweet?"
-    +"&text="+encodeURIComponent("WhatTimeIsItNow?")
-    +"&url="+encodeURIComponent(window.location.href)
-    , "share!"
-    , "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
+    window.open("https://twitter.com/intent/tweet?" +
+        "&text=" + encodeURIComponent("WhatTimeIsItNow?") +
+        "&url=" + encodeURIComponent(window.location.href), "share!", "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
     );
 };
 
-function popUpFacebook(){
-    window.open("https://www.facebook.com/sharer/sharer.php"
-    +"?u="+encodeURIComponent(window.location.href)
-    , "share!"
-    , "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
+function popUpFacebook() {
+    window.open("https://www.facebook.com/sharer/sharer.php" +
+        "?u=" + encodeURIComponent(window.location.href), "share!", "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
+    );
+};
+
+function popUpLine() {
+    window.open("https://social-plugins.line.me/lineit/share"
+    +"?url=" + encodeURIComponent(window.location.href), "share!", "left=400, top=200, width=600, height=400, scrollbars= 0, toolbar=0, menubar=0"
     );
 };
