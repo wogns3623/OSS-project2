@@ -126,7 +126,7 @@ function popUpLine(postID) {
 var qs = getQueryStringObject();
 console.log(qs.postID);
 
-if (qs.postId != undefined) {
+if (qs.postID != undefined) {
     document.getElementById("contents_wrap").innerHTML = "";
     getPostByID(qs.postID);
 } else {
