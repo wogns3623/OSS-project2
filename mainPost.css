@@ -114,10 +114,10 @@ button#post_send {
     cursor: pointer;
 }
 button#post_send:hover {
-    background-color: #f8cf75b2;
+    background-color: #72471e;
 }
 button#post_send:active {
-    background-color: #c5a04fb2;
+    background-color: #594129;
 }
 
 #view_wrap {
