@@ -19,21 +19,7 @@ var getPostTF = false;
 var getPostByIDTF = false;
 // var serverAddress = "http://18.216.159.54/board"; +"?offset="+i
 
-function getPost() {
-    request.open("GET", serverAddress, true);
-    getPostTF = true;
-    request.send();
-}
-
-function getPostByID(postID) {
-    getPostByIDTF = true;
-    request.open("GET", serverAddress + "/" + postID, true);
-    request.send();
-
-    console.log(data);
-}
-
-request.onreadystatechange = function (event) {
+function getFunction() {
     if (request.readyState == 4) {
         if (request.status == 200) {
             data = JSON.parse(JSON.parse(request.responseText));
@@ -46,6 +32,30 @@ request.onreadystatechange = function (event) {
                 var articles = dataToArticle(data);
                 document.getElementById("contents_wrap").innerHTML = articles;
             }
+        }
+    }
+}
+
+function getPost() {
+    request.onreadystatechange = getFunction;
+    request.open("GET", serverAddress, true);
+    getPostTF = true;
+    request.send();
+}
+
+function getPostByID(postID) {
+    request.onreadystatechange = getFunction;
+    getPostByIDTF = true;
+    request.open("GET", serverAddress + "/" + postID, true);
+    request.send();
+    
+    console.log(data);
+}
+
+function sendFunction() {
+    if (request.readyState == 4) {
+        if (request.status == 200) {
+            getPost();
         }
     }
 }
@@ -89,19 +99,46 @@ function clickSendBtn() {
         contents: contentsVal.value,
     };
 
-    fetch("https://opso.ml/board", {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json; charset=UTF-8"
-        },
-        body: JSON.stringify(data)
-    }).then();
+    
+    request.open("POST", serverAddress, true);
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(JSON.stringify( data ));
+    request.onreadystatechange = sendFunction;
 
-    setTimeout(function () {
-        getPost()
-    }, 600);
-
-}
+    // fetch("https://opso.ml/board", {
+    //     method: "post",
+    //     headers: {
+    //         "Content-Type": "application/json; charset=UTF-8"
+    //     },
+    //     body: JSON.stringify(data)
+    // }).then();
+        
+    // setTimeout(function () {
+    //     getPost()
+    // }, 300);
+        
+    }
+    
+/*
+fetch("https://opso.ml/board", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+                "author": this.state.name,
+                "contents": this.state.text
+            })
+        }).then((response)=>{
+    response 가 변수로 받아와짐
+   그것을 여기서 처리함
+   }).then(()=>{
+   fetch("https://opso.ml/board").then((response)=>{
+    response 가 변수로 받아와짐 
+   여기서 get한거 처리함
+})
+}).catch(err => console.log(err));
+*/
 
 function popUpTwitter(postID) {
     // window.open("https://naver.com/", "", "left=400, top=400, width=400, height=400, scrollbars=0, toolbar=0, menubar=0");

@@ -13,13 +13,8 @@ main {
     margin-top: 8%;
     display: flex;
 }
-
-.margin#main_right {
-    flex: 2 2 auto;
-}
-
-.margin#main_left {
-    flex: 2 2 auto;
+.margin#main_side {
+    flex: 2 2 200px;
 }
 
 .contents {
@@ -167,6 +162,10 @@ button#post_send:active {
 
 .view_article {
     margin-top: 10px;
+/* 
+    width: 500px; */
+    word-break:break-all;
+
     font-size: 20px;
 }
 
